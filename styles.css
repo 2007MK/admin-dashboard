@@ -2,12 +2,14 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  --white: #ffffff;
-  --alice-blue: #e3e9f0;
-  --celestial-blue: #1293d5;
-  --night: #0e0e0e;
-  --pink: #ff6392;
-  --gray: #949494;
+  --card-background: #2d2c4e;
+  --main-background: #1b1c30;
+  --text-color: #b7b4df;
+  --text-color-heading: #eaedf6;
+  --sidebar-background: #0d0d24;
+  --color-line: #604aea;
+  --color-line-2: #e5a3da;
+  color: var(--text-color);
 }
 
 body {
@@ -17,17 +19,19 @@ body {
     "sidebar header header"
     "sidebar main main";
   height: 100vh;
+  background-color: var(--complete-background);
 }
 
 .sidebar {
   grid-area: sidebar;
-  background-color: var(--celestial-blue);
-  color: var(--white);
+  background-color: var(--sidebar-background);
   padding: 20px;
 }
 
 .dashboard {
+  font-size: 60px;
   margin-bottom: 60px;
+  color: var(--text-color-heading);
 }
 .dashboard > span {
   vertical-align: middle;
@@ -35,13 +39,26 @@ body {
 
 li {
   list-style: none;
-  font-size: 30px;
+  font-size: 20px;
   margin: 30px;
   font-weight: bold;
+  color: var(--text-color-heading);
 }
 
 .list-1 {
   margin-bottom: 60px;
+}
+
+.list-1 > ul > li,
+.list-2 > ul > li {
+  background-color: var(--card-background);
+  box-sizing: content-box;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.list-1 > ul > li:first-child {
+  background-color: var(--color-line);
 }
 
 .header {
@@ -52,6 +69,7 @@ li {
     "search profile"
     "welcome buttons";
   padding: 20px 30px;
+  background-color: var(--main-background);
 }
 
 .search {
@@ -63,7 +81,7 @@ li {
   width: 80%;
   height: 10px;
   border-radius: 20px;
-  background-color: var(--alice-blue);
+  background-color: var(--card-background);
   border: none;
   font-size: 1rem;
   padding: 1rem;
@@ -106,6 +124,7 @@ li {
 .username-big {
   font-weight: 800;
   font-size: 30px;
+  color: var(--text-color-heading);
 }
 
 .buttons {
@@ -120,8 +139,8 @@ li {
   width: 100px;
   height: 40px;
   border-radius: 20px;
-  background-color: var(--celestial-blue);
-  color: var(--white);
+  background-color: var(--color-line);
+  color: var(--text-color-heading);
   font-weight: bold;
   border: none;
 }
@@ -132,7 +151,7 @@ li {
   grid-template-columns: 2fr 0.8fr;
   grid-template-areas: "projects aside";
   padding: 20px;
-  background-color: var(--alice-blue);
+  background-color: var(--main-background);
 }
 
 .aside {
@@ -157,14 +176,14 @@ li {
   min-height: 200px;
   border-radius: 10px;
   border: 1px solid black;
-  background-color: var(--white);
+  background-color: var(--card-background);
   overflow: hidden;
 }
 
 .color-line {
   width: 30px;
   height: 100%;
-  background-color: var(--pink);
+  background-color: var(--color-line-2);
 }
 
 .project-info {
@@ -178,12 +197,13 @@ li {
 .topic-info > .tag {
   font-size: 20px;
   font-weight: bold;
+  color: var(--text-color-heading);
 }
 
 .project-info > .info,
 .card-small > .info,
 .topic-info > .tag-line {
-  color: var(--gray);
+  color: var();
   font-weight: bold;
 }
 
@@ -193,15 +213,16 @@ li {
   margin-top: 25px;
 }
 
+.projects > h2,
 .announcements > h2,
 .trending > h2 {
-  background-color: var(--alice-blue);
+  color: var(--text-color-heading);
 }
 
 .announcements {
   grid-area: announcements;
   grid-row: 1;
-  background-color: var(--white);
+  background-color: var();
   border-radius: 10px;
 }
 
@@ -211,7 +232,7 @@ li {
   padding-right: 40px;
 }
 .announcements-container > .card-small {
-  border-bottom: 1px solid var(--gray);
+  border-bottom: 1px solid var(--color-line-2);
   padding-bottom: 30px;
   padding-top: 30px;
 }
@@ -224,13 +245,13 @@ li {
 .trending {
   grid-area: trending;
   grid-row: 2;
-  background-color: var(--white);
+  background-color: var();
   border-radius: 10px;
 }
 
 .trending-container {
   display: flex;
-  gap: 10px;
+  gap: 30px;
   flex-direction: column;
   padding: 40px;
 }
@@ -238,7 +259,7 @@ li {
 .trending-card {
   align-items: center;
   display: flex;
-  gap: 10px;
+  gap: 20px;
 }
 
 .topic-pic > img {
@@ -259,6 +280,9 @@ li {
 .material-icons.md-48 {
   font-size: 48px;
 }
+.material-icons.md-60 {
+  font-size: 60px;
+}
 
 /* Rules for using icons as black on a light background. */
 .material-icons.md-dark {
@@ -278,8 +302,12 @@ li {
 
 span {
   margin-right: 20px;
+  color: var(--text-color-heading);
 }
 
 div > h2 {
   padding-bottom: 20px;
+}
+img {
+  border-radius: 100%;
 }
