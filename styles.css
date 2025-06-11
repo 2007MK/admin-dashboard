@@ -172,12 +172,15 @@ li {
   padding: 30px 20px;
 }
 
-.project-info > .title {
+.project-info > .title,
+.card-small > .title {
   font-size: 20px;
   font-weight: bold;
+  margin-bottom: 5px;
 }
 
-.project-info > .info {
+.project-info > .info,
+.card-small > .info {
   color: var(--gray);
   font-weight: bold;
 }
@@ -198,6 +201,22 @@ li {
   grid-row: 1;
   background-color: var(--white);
   border-radius: 10px;
+}
+
+.announcements-container {
+  display: grid;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.announcements-container > .card-small {
+  border-bottom: 1px solid var(--gray);
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+.announcements-container > .card-small:last-child {
+  border-bottom: 0;
+  padding-bottom: 30px;
+  padding-top: 30px;
 }
 
 .trending {
