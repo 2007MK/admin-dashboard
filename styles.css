@@ -110,10 +110,10 @@ li {
 
 .buttons {
   display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 20px;
   margin-top: 10px;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .buttons > button {
@@ -139,10 +139,10 @@ li {
   display: grid;
   grid-template-rows: 1fr 1fr;
   gap: 40px;
+  margin-left: -10px;
 }
 .projects {
   grid-area: projects;
-  margin-right: 40px;
 }
 
 .cards-container {
@@ -239,4 +239,8 @@ li {
 
 span {
   margin-right: 20px;
+}
+
+div > h2 {
+  padding-bottom: 20px;
 }
