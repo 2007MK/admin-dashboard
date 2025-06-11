@@ -129,7 +129,7 @@ li {
 .main {
   grid-area: main;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2fr 0.8fr;
   grid-template-areas: "projects aside";
   padding: 20px;
   background-color: var(--alice-blue);
@@ -137,7 +137,7 @@ li {
 
 .aside {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto auto;
   gap: 40px;
   margin-left: -10px;
 }
@@ -158,10 +158,11 @@ li {
   border-radius: 10px;
   border: 1px solid black;
   background-color: var(--white);
+  overflow: hidden;
 }
 
 .color-line {
-  width: 25px;
+  width: 30px;
   height: 100%;
   background-color: var(--pink);
 }
@@ -173,14 +174,15 @@ li {
 }
 
 .project-info > .title,
-.card-small > .title {
+.card-small > .title,
+.topic-info > .tag {
   font-size: 20px;
   font-weight: bold;
-  margin-bottom: 5px;
 }
 
 .project-info > .info,
-.card-small > .info {
+.card-small > .info,
+.topic-info > .tag-line {
   color: var(--gray);
   font-weight: bold;
 }
@@ -224,6 +226,24 @@ li {
   grid-row: 2;
   background-color: var(--white);
   border-radius: 10px;
+}
+
+.trending-container {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.trending-card {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
+.topic-pic > img {
+  width: 40px;
+  height: 40px;
 }
 
 /* Rules for sizing the icon. */
