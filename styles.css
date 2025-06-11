@@ -223,18 +223,17 @@ li {
   grid-area: announcements;
   grid-row: 1;
   background-color: var();
-  border-radius: 10px;
 }
 
 .announcements-container {
   display: grid;
-  padding-left: 40px;
-  padding-right: 40px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 .announcements-container > .card-small {
   border-bottom: 1px solid var(--color-line-2);
-  padding-bottom: 30px;
-  padding-top: 30px;
+  padding: 30px;
+  background-color: var(--card-background);
 }
 .announcements-container > .card-small:last-child {
   border-bottom: 0;
@@ -254,6 +253,8 @@ li {
   gap: 30px;
   flex-direction: column;
   padding: 40px;
+  background-color: var(--card-background);
+  border-radius: 10px;
 }
 
 .trending-card {
@@ -310,4 +311,10 @@ div > h2 {
 }
 img {
   border-radius: 100%;
+}
+
+span,
+button,
+li {
+  cursor: pointer;
 }
